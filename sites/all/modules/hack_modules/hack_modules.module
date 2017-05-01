@@ -2,6 +2,11 @@
 
 function hack_modules_form_alter(&$form, &$form_state, &$form_id) {
     if($form_id === 'contact_site_form') {
-        $form['copy']['#access'] = 0;
+        $form['copy']['#default_value'] = 1;
+        $form['subject']['#default_value'] = 'feedback';
+    }
+
+    if($form_id === 'node_type_form') {
+        $form['display']['node_submitted']['#default_value'] = 0;
     }
 }

@@ -1,0 +1,6 @@
+name = Follow Modules
+description = custom module for following
+core = 7.x
+package = Follow_Module
+files[] = custom_follow.module
+stylesheets[all][] = styles.css

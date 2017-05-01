@@ -1,0 +1,17 @@
+<?php
+
+function custom_follow_follow_networks_alter(&$networks, $uid = 0) {
+    $networks[$uid]['IMDB'] = array(
+        'title' => t('IMDB'),
+        'domain' => 'imdb.com',
+    );
+
+    $networks[$uid]['Drupal'] = array(
+        'title' => t('The Drupes'),
+        'domain' => 'drupal.com',
+    );
+    $networks[$uid]['Github'] = array(
+        'title' => t('The Git'),
+        'domain' => 'github.com',
+    );
+}

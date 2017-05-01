@@ -1,0 +1,11 @@
+a.follow-link-IMDB {
+  background-image: url(/sites/all/modules/custom_follow/icons/icon-imdb.png);
+}
+
+a.follow-link-Drupal {
+  background-image: url(/sites/all/modules/custom_follow/icons/icon-drupal.png);
+}
+
+a.follow-link-Github {
+  background-image: url(/sites/all/modules/custom_follow/icons/icon-github.png);
+}
