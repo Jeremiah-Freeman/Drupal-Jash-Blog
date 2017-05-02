@@ -1,12 +1,24 @@
 <?php
 
 function hack_modules_form_alter(&$form, &$form_state, &$form_id) {
-    if($form_id === 'contact_site_form') {
-        $form['copy']['#default_value'] = 1;
-        $form['subject']['#default_value'] = 'feedback';
-    }
-
-    if($form_id === 'node_type_form') {
-        $form['display']['node_submitted']['#default_value'] = 0;
+    switch($form_id) {
+        case 'contact_site_form':
+            $form['copy']['#default_value'] = 1;
+            $form['subject']['#default_value'] = 'feedback';
+        break;
+        case 'node_type_form':
+            $form['display']['node_submitted']['#default_value'] = 0;
+        break;
+        case 'recipes_node_form':
+            $form['comment_settings']['#type'] = 'hidden';
+        break;
+        case 'comment_node_page_form':
+            $form['comment_settings']['#type'] = 'hidden';
+            $form['edit-comment-body-und-0-format']['#type'] = 'hidden';
+            print_r('edit-comment-body-und-0-format');
+        //     print '<pre>';
+        //     print_r($form);
+        //     print '</pre>';
+        // break;
     }
 }
